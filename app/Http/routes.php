@@ -28,3 +28,8 @@ Route::get('terminate',[
     'middleware' => 'terminate',
     'uses' => 'ABCController@index',
 ]);
+
+Route::get('/usercontroller/path',[
+    'middleware' => 'First',
+    'uses' => 'UserController@showPath'
+]);
