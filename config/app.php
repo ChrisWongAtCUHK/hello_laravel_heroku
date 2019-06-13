@@ -93,7 +93,7 @@ return [
 
     'key' => env('SomeRandomStringSomeRandomString'),
 
-    'cipher' => 'AES-256-CBC',
+    'cipher' => AES-256-CBC,
 
     /*
     |--------------------------------------------------------------------------
