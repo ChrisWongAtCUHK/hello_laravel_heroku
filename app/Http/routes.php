@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', function () {
-    return view('test');
-});
+Route::get('ID/{id}',function($id) {
+    echo 'ID: '.$id;
+ });
+
+ Route::get('role',[
+    'middleware' => 'Role:editor',
+    'uses' => 'TestController@index',
+ ]);
