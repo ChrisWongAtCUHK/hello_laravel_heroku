@@ -35,3 +35,5 @@ Route::get('/usercontroller/path',[
 ]);
 
 Route::resource('my','MyController');
+
+Route::controller('test','ImplicitController');
