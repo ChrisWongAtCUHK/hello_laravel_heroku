@@ -25,3 +25,36 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+## Debug with XDebug in VSCode
+1. Install PHP Debug for VSCode
+2. vim `php --ini | grep xdebug | tr -d ,`
+    ```
+    zend_extension=/usr/local/php5/lib/php/extensions/no-debug-non-zts-20160303/xdebug.so
+    [xdebug]
+    xdebug.remote_enable=on
+    xdebug.default_enable=on
+    xdebug.remote_autostart=on
+    xdebug.remote_port=9000
+    xdebug.remote_host=localhost
+    xdebug.profiler_enable_trigger=1
+    xdebug.profiler_output_name=xdebug-profile-cachegrind.out-%H-%R
+    xdebug.var_display_max_children = 128
+    xdebug.var_display_max_data = 512
+    xdebug.var_display_max_depth = 3
+    ```
+3. Code->Preferences->Settings
+```
+"php.validate.executablePath": "/usr/bin/php"
+```
+4. run dev
+    * 
+    ```
+    npm run dev
+    ```
+    * 
+    ```
+    php artisan serve
+    ```
+5. Set break point in controller method
+6. Debug->Listen for XDebug

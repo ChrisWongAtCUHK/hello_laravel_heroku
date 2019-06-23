@@ -11,6 +11,7 @@ class TestController extends Controller
 {
     public function index() 
     {
-        echo "<br>Test Controller.";
+        $text = "debug tesg";
+        echo "<br>".$text;
      }
 }
